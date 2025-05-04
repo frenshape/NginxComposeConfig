@@ -62,3 +62,7 @@ Finish with
 docker compose down
 ```
 
+# Acknowledgements
+
+This example was heavily inspired by https://github.com/kennylee2008/nginx_proxy_pass_config_sample 
+
