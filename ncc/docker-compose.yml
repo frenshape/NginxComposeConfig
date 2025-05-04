@@ -1,0 +1,35 @@
+services:
+  flask-f1:
+    build: ./f1
+    expose:
+      - "5000"
+    networks:
+      - custom-network
+
+  flask-f2:
+    build: ./f2
+    expose:
+      - "5000"
+    networks:
+      - custom-network
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d/
+      - ./landing_page/:/var/www/html
+    networks:
+      - custom-network
+    depends_on:
+      - flask-f1
+      - flask-f2
+
+networks:
+  custom-network:
+    name: custom-network
+    driver: bridge
+
