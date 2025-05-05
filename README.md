@@ -1,11 +1,7 @@
 # NginxComposeConfig
 Simple nginx configuration to serve multiple apps. 
 
-This is the example I wish I could've found when I was setting up a mini server on my LAN. This is intended as a trivial example to serve as a starting point,
-I have no idea if this demonstrates good practices or not.
-
-It does, however, seem to work correctly when tested on a Debian12 system with nginx/1.27.5. 
-
+This is probably the wrong way to set things up
 
 To run:
 clone the depo
@@ -61,8 +57,3 @@ Finish with
 ```bash
 docker compose down
 ```
-
-# Acknowledgements
-
-This example was heavily inspired by https://github.com/kennylee2008/nginx_proxy_pass_config_sample 
-
